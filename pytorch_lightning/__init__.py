@@ -28,8 +28,10 @@ else:
     from .trainer.trainer import Trainer
     from .core.lightning import LightningModule
     from .core.decorators import data_loader
-    import logging
-
+    def set_logger_level():                                                                                                         
+        import logging                                                                                                        
+        logging.basicConfig(level=logging.INFO)                                                                               
+    set_logger_level()
     __all__ = [
         'Trainer',
         'LightningModule',
